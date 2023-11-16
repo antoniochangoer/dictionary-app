@@ -70,7 +70,10 @@ export default function SearchBar() {
             }}`}
             placeholder="Search for any word..."
           />
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+          <div
+            onClick={() => searchForMeaning()}
+            className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3"
+          >
             <MagnifyingGlassIcon
               className="h-5 w-5 text-brand-main"
               aria-hidden="true"
