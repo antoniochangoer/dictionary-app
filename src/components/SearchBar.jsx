@@ -63,7 +63,7 @@ export default function SearchBar() {
             type="text"
             name="word"
             id="word"
-            className={`font-bold pl-6 py-3 bg-brand-light-300 dark:bg-brand-dark-700 block w-full rounded-2xl border-0 text-inherit shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-main text-base md:text-xl ${
+            className={`font-bold pl-6 py-3 bg-brand-light-200 dark:bg-brand-dark-700 block w-full rounded-2xl border-0 text-inherit shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-main text-base md:text-xl ${
               status === 'error'
                 ? 'focus:ring-brand-red outline-1 outline-brand-red'
                 : null
