@@ -32,17 +32,22 @@ export default function SearchBar() {
     }
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
+  function checkIfEmpty() {
     if (searchWord.trim() === '') {
       setStatus('error');
       setError('Whoops, can’t be empty…');
-      return;
+      return true;
     }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // check if searchWord is empty
+    const isEmpty = checkIfEmpty();
 
     // initiate search with searchWord as default argument
-    searchForMeaning();
+    if (!isEmpty) searchForMeaning();
   }
 
   return (
@@ -71,7 +76,11 @@ export default function SearchBar() {
             placeholder="Search for any word..."
           />
           <div
-            onClick={() => searchForMeaning()}
+            onClick={() => {
+              if (!checkIfEmpty()) {
+                searchForMeaning();
+              }
+            }}
             className="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3"
           >
             <MagnifyingGlassIcon
