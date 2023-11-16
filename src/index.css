@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .svg-hover:hover path {
   stroke: #a445ed;
 }
