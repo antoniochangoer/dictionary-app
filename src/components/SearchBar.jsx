@@ -68,7 +68,7 @@ export default function SearchBar() {
                 ? 'focus:ring-brand-red outline-1 outline-brand-red'
                 : null
             }}`}
-            placeholder="Search"
+            placeholder="Search for any word..."
           />
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
             <MagnifyingGlassIcon
