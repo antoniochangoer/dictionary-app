@@ -82,11 +82,13 @@ export default function SearchBar() {
         )}
       </form>
 
-      <SearchResult
-        searchResult={searchResult}
-        setSearchWord={setSearchWord}
-        searchForMeaning={searchForMeaning}
-      />
+      {status !== 'empty' && (
+        <SearchResult
+          searchResult={searchResult}
+          setSearchWord={setSearchWord}
+          searchForMeaning={searchForMeaning}
+        />
+      )}
       {/* If no definition found show error */}
       {status === 'empty' && <Error />}
     </>
